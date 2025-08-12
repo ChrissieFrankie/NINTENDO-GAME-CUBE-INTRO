@@ -8,4 +8,4 @@ My mother sold my GameCube 😢. Could’ve held onto it for decades and sell it
 
 ## Credits :art:
 
-Designed by **Christopher Francisco** and Cursor
+Designed by **Christopher Francisco** Cursor and ChatGPT
