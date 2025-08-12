@@ -34,7 +34,7 @@ function App() {
 
     // Create a single purple cube
     const geometry = new THREE.BoxGeometry(2, 2, 2);
-    const material = new THREE.MeshPhongMaterial({ color: 0x6a0dad });
+    const material = new THREE.MeshPhongMaterial({ color: 0x5C2E91});
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
