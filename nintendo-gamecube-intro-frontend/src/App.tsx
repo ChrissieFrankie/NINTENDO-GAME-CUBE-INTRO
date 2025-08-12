@@ -22,19 +22,28 @@ function App() {
 
     // Renderer setup
     const renderer = new THREE.WebGLRenderer({ antialias: true });
-    renderer.setSize(mountRef.current.clientWidth, mountRef.current.clientHeight);
+    renderer.setSize(
+      mountRef.current.clientWidth,
+      mountRef.current.clientHeight
+    );
     mountRef.current.appendChild(renderer.domElement);
 
     // Lighting
-    const ambientLight = new THREE.AmbientLight(0xffffff, 0.6);
+    const ambientLight = new THREE.AmbientLight(0xffffff, 0.8); // Increased intensity for better fill
     scene.add(ambientLight);
-    const directionalLight = new THREE.DirectionalLight(0xffffff, 1);
-    directionalLight.position.set(5, 5, 5);
+    const directionalLight = new THREE.DirectionalLight(0xffffff, 1.5); // Increased intensity for stronger highlight
+    directionalLight.position.set(5, 10, 7); // Adjusted position for better angle
     scene.add(directionalLight);
+    const secondaryLight = new THREE.DirectionalLight(0xffffff, 0.8); // Added secondary light for multi-angle effect
+    secondaryLight.position.set(-5, -5, 5);
+    scene.add(secondaryLight);
 
     // Create a single purple cube
     const geometry = new THREE.BoxGeometry(2, 2, 2);
-    const material = new THREE.MeshPhongMaterial({ color: 0x5C2E91});
+    const material = new THREE.MeshPhongMaterial({
+      color: 0x6A5ACD,
+      shininess: 100,
+    }); // Added shininess for gloss
     const cube = new THREE.Mesh(geometry, material);
     scene.add(cube);
 
